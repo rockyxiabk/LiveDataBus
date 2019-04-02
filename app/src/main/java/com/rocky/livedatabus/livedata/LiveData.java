@@ -98,6 +98,7 @@ public class LiveData<T> {
         @Override
         public void onDestroy(int code) {
             map.remove(code);
+            mPendingDelayMap.get(code).clear();
         }
     };
 
